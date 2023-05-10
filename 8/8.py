@@ -1,7 +1,7 @@
 # Copy input dataset(people.json) to HDFS and then get into PySpark Shell. To read json file, use format to specify the type of datasource. 
 
-df_json = spark.read.load("people.json", format="json")
-df_json = spark.read.json("people.json")
+df_json = spark.read.load("/home/annisa/Downloads/people.json", format="json")
+df_json = spark.read.json("/home/annisa/Downloads/people.json")
 df_json.printSchema()
 
 df_json.show()

@@ -12,7 +12,7 @@ df2 = sc.parallelize(mylist).toDF(myschema)
 # Method3: Read data from a file, Infer schema and convert to DataFrame. Copy people.txt located in examples/resources directory to hdfs (hadoop fs -put /path/to/people.txt people.txt )
 
 from pyspark.sql import SQLContext, Row
-peopleRDD = sc.textFile("people.txt")
+peopleRDD = sc.textFile("/home/annisa/Downloads/people.txt")
 people_sp = peopleRDD.map(lambda l: l.split(","))
 people = people_sp.map(lambda p: Row(name=p[0], age=int(p[1])))
 df_people = spark.createDataFrame(people)
@@ -24,7 +24,7 @@ spark.sql("SELECT name,age FROM people where age > 19").show()
 # Method4: Read data from file, assign schema programmatically.
 
 from pyspark.sql import SQLContext, Row
-peopleRDD = sc.textFile("people.txt")
+peopleRDD = sc.textFile("/home/annisa/Downloads/people.txt")
 people_sp = peopleRDD.map(lambda l: l.split(","))
 people = people_sp.map(lambda p: Row(name=p[0], age=int(p[1])))
 df_people = people_sp.map(lambda p: (p[0], p[1].strip()))
@@ -36,5 +36,3 @@ df_people = spark.createDataFrame(people,schema)
 df_people.show()
 df_people.createOrReplaceTempView("people")
 spark.sql("select * from people").show()
-
-

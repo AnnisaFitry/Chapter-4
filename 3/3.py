@@ -1,5 +1,5 @@
 # Get into PySpark Shell and execute below commands. 
-Create DataFrame and convert to RDD  
+# Create DataFrame and convert to RDD  
 
 mylist = [(50, "DataFrame"),(60, "pandas")]
 myschema = ['col1', 'col2']

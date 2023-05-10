@@ -58,3 +58,32 @@
 49.	csv: Membaca atau menulis file CSV.
 50.	header: Menentukan apakah file CSV memiliki header atau tidak.
 51.	codec: Menentukan codec yang digunakan untuk membaca atau menulis data.
+
+## LAPORAN PRAKTIKUM
+### 1
+![](img\11.png)
+![](img\12.png)
+
+### 2
+![](img\21.png)
+
+### 3
+![](img\31.png)
+
+### 4
+![](img\41.png)
+
+### 5
+![](img\51.png)
+
+### 6
+![](img\61.png)
+
+### 7
+![](img\71.png)
+
+### 8
+![](img\81.png)
+
+### 9
+![](img\91.png)

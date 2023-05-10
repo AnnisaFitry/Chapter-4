@@ -1,5 +1,3 @@
-//Below Scala example creates a Dataset and DataFrame from an RDD. Enter to scala shell with //spark-shell command. 
-
 case class Dept(dept_id: Int, dept_name: String)
 
 val deptRDD = sc.makeRDD(Seq(Dept(1,"Sales"),Dept(2,"HR")))
@@ -22,7 +20,4 @@ deptDF.rdd
 
 //Compile time safety check is done as shown in below code. Since dept_location is not a //member of Dept case class, it will throw an error.
 
-deptDS.filter(col("dept_location") > 1).show()
-
-//<console>:31: error: value dept_location is not a member of Dept
-//deptDS.filter(x => x.dept_location > 1).show()
+deptDS.filter(x => x.dept_location > 1).show()
